@@ -1,0 +1,34 @@
+# Maintainer: vivek <vivek@shastraos.com>
+
+pkgname=homebrew
+pkgver=3.2.5
+pkgrel=1
+epoch=
+pkgdesc="The Missing Package Manager for macOS (or Linux)"
+arch=('any')
+url="https://brew.sh"
+license=('BSD')
+depends=('bash' 'curl' 'git')
+makedepends=()
+optdepends=()
+provides=("$pkgname")
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=homebrew.install
+changelog=
+source=()
+noextract=()
+md5sums=()
+
+package() {
+  mkdir -p "$pkgdir/usr/share/homebrew-install"
+
+  echo '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"' > "$pkgdir/usr/share/homebrew-install/install_homebrew.sh"
+  
+  chmod +x "$pkgdir/usr/share/homebrew-install/install_homebrew.sh"
+}
+
+
+
