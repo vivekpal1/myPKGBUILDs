@@ -1,5 +1,6 @@
 # Maintainer: Brad Erhart <tocusso underscore malty at aleeas dot com>
 # Maintainer: Vincent Bernardoff <vb@luminar.eu.org>
+# Contributor: Vivek Pal <vivek@shastraos.com>
 
 pkgname=solana-bin
 _pkgname="${pkgname%-bin}"
